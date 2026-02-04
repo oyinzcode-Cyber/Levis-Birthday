@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Devine Levi ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 700px;
+      border-radius: 25px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      position: relative;
+      animation: pop 1s ease;
+    }
+
+    @keyframes pop {
+      from { transform: scale(0.7); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.8rem;
+      color: #ff4d6d;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      color: #444;
+      margin-bottom: 15px;
+    }
+
+    .avatar {
+      width: 160px;
+      height: 160px;
+      margin: 15px auto 25px;
+      border-radius: 50%;
+      padding: 6px;
+      background: linear-gradient(135deg, #ff4d6d, #fad0c4);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      background: #fff;
+    }
+
+    .message {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .highlight {
+      color: #ff4d6d;
+      font-weight: 600;
+    }
+
+    button {
+      background: #ff4d6d;
+      border: none;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+      margin: 8px;
+    }
+
+    button:hover {
+      background: #e63956;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .surprise {
+      margin-top: 20px;
+      font-size: 1.1rem;
+      color: #222;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .hearts span {
+      position: fixed;
+      bottom: -20px;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      color: #ff4d6d;
+      opacity: 0.8;
+    }
+
+    @keyframes float {
+      from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      to {
+        transform: translateY(-110vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Happy Birthday 🎂❤️</h1>
+    <h2>My Queen, <span class="highlight">Devine Levi</span> 😘</h2>
+
+    <div class="avatar">
+      <!-- Replace devine.jpg with her real image filename -->
+      <img src="C:\Users\hp\Downloads\levi.jpeg" alt="Devine Levi">
+    </div>
+
+    <p class="message">
+      Today is the day the universe decided to show off…<br>
+      and created <span class="highlight">YOU</span>. 🌍✨<br><br>
+
+      From your smile that can restart my heart like NEPA light ⚡😄,
+      to your laugh that makes my problems forget themselves,
+      you are my daily dose of joy, love, and premium happiness. 💕
+      <br><br>
+
+      Loving you is my favorite hobby,
+      my full-time job,
+      and my lifetime contract (no resignation allowed 😌✍️).
+    </p>
+
+    <button onclick="showLove()">Click for Extra Love 💝</button>
+    <button onclick="showJoke()">Click for Comedy 😂</button>
+
+    <div id="love" class="surprise hidden"></div>
+    <div id="joke" class="surprise hidden"></div>
+
+    <footer>
+      Made with crazy love 💘 by Your Boyfriend 💪😎<br>
+      &copy; <span id="year"></span>
+    </footer>
+  </div>
+
+  <div class="hearts" id="hearts"></div>
+
+  <script>
+    const loveMessages = [
+      "Devine, if love was money, I would be a billionaire because of you 💎💰❤️",
+      "You are my heartbeat, my WiFi, and my charger — without you, I go offline 😩📱💕",
+      "I promise to love you even when you steal my food 😌🍟❤️",
+      "You are the reason my phone battery dies fast — too much texting you 😍📲💖",
+      "My heart chose you and canceled all other subscriptions 💳❌❤️"
+    ];
+
+    const jokes = [
+      "I wanted to buy you the world… but Amazon said ‘Out of Stock’ 😭🌍😂",
+      "You are so fine that even Google can’t search your level 🔍🔥😄",
+      "If beauty was a crime, you’d be serving life sentence 😌🚔💖",
+      "You must be made of sugar because you’re giving me diabetes of love 🍭😂❤️",
+      "Even my data subscription agrees: You are my best connection 📶😍"
+    ];
+
+    function showLove() {
+      const loveDiv = document.getElementById('love');
+      const random = loveMessages[Math.floor(Math.random() * loveMessages.length)];
+      loveDiv.textContent = random;
+      loveDiv.classList.remove('hidden');
+    }
+
+    function showJoke() {
+      const jokeDiv = document.getElementById('joke');
+      const random = jokes[Math.floor(Math.random() * jokes.length)];
+      jokeDiv.textContent = random;
+      jokeDiv.classList.remove('hidden');
+    }
+
+    // Floating hearts
+    function createHeart() {
+      const heart = document.createElement('span');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.fontSize = (15 + Math.random() * 25) + 'px';
+      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+      document.getElementById('hearts').appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 7000);
+    }
+
+    setInterval(createHeart, 400);
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
