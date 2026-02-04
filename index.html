@@ -4,12 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Happy Birthday Devine Levi ❤️</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4);
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
       min-height: 100vh;
       display: flex;
       justify-content: center;
@@ -25,7 +27,6 @@
       padding: 30px;
       text-align: center;
       box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-      position: relative;
       animation: pop 1s ease;
     }
 
@@ -38,7 +39,6 @@
       font-family: 'Pacifico', cursive;
       font-size: 2.8rem;
       color: #ff4d6d;
-      margin-bottom: 10px;
     }
 
     h2 {
@@ -61,7 +61,6 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      background: #fff;
     }
 
     .message {
@@ -85,7 +84,7 @@
       font-size: 1rem;
       cursor: pointer;
       transition: 0.3s;
-      margin: 8px;
+      margin: 6px;
     }
 
     button:hover {
@@ -101,12 +100,6 @@
       margin-top: 20px;
       font-size: 1.1rem;
       color: #222;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
     }
 
     .hearts span {
@@ -115,16 +108,15 @@
       font-size: 20px;
       animation: float 6s linear infinite;
       color: #ff4d6d;
-      opacity: 0.8;
     }
 
     @keyframes float {
       from {
-        transform: translateY(0) scale(1);
+        transform: translateY(0);
         opacity: 1;
       }
       to {
-        transform: translateY(-110vh) scale(1.5);
+        transform: translateY(-110vh);
         opacity: 0;
       }
     }
@@ -136,14 +128,24 @@
     }
   </style>
 </head>
+
 <body>
 
+  <!-- Background Music -->
+  <audio id="bg-music" loop>
+    <source src="Praiz_Singz_-_Happy_Birthday_Song_II_CeeNaija.com_.mp3" type="audio/mpeg">
+  </audio>
+
   <div class="card">
+
+    <!-- Play Button -->
+    <button onclick="playMusic()">▶️ Play Birthday Song 🎶</button>
+
     <h1>Happy Birthday 🎂❤️</h1>
+
     <h2>My Queen, <span class="highlight">Devine Levi</span> 😘</h2>
 
     <div class="avatar">
-      <!-- Replace devine.jpg with her real image filename -->
       <img src="levi.jpeg" alt="Devine Levi">
     </div>
 
@@ -158,7 +160,7 @@
 
       Loving you is my favorite hobby,
       my full-time job,
-      and my lifetime contract (no resignation allowed 😌✍️).
+      and my lifetime contract 😌✍️.
     </p>
 
     <button onclick="showLove()">Click for Extra Love 💝</button>
@@ -168,64 +170,70 @@
     <div id="joke" class="surprise hidden"></div>
 
     <footer>
-      Made with crazy love 💘 by Your Boyfriend 💪😎<br>
+      Made with crazy love 💘 by Your Boyfriend 😎<br>
       &copy; <span id="year"></span>
     </footer>
+
   </div>
 
   <div class="hearts" id="hearts"></div>
 
   <script>
+
+    const music = document.getElementById("bg-music");
+
+    function playMusic() {
+      music.play();
+    }
+
     const loveMessages = [
-      "Devine, if love was money, I would be a billionaire because of you 💎💰❤️",
-      "You are my heartbeat, my WiFi, and my charger — without you, I go offline 😩📱💕",
-      "I promise to love you even when you steal my food 😌🍟❤️",
-      "You are the reason my phone battery dies fast — too much texting you 😍📲💖",
-      "My heart chose you and canceled all other subscriptions 💳❌❤️"
+      "Devine, if love was money, I would be a billionaire 💎❤️",
+      "You are my heartbeat and my WiFi 😩📱💕",
+      "I promise to love you even when you steal my food 😌🍟",
+      "You make my phone battery die fast 😍📲",
+      "My heart chose you forever 💳❌❤️"
     ];
 
     const jokes = [
-      "I wanted to buy you the world… but Amazon said ‘Out of Stock’ 😭🌍😂",
-      "You are so fine that even Google can’t search your level 🔍🔥😄",
-      "If beauty was a crime, you’d be serving life sentence 😌🚔💖",
-      "You must be made of sugar because you’re giving me diabetes of love 🍭😂❤️",
-      "Even my data subscription agrees: You are my best connection 📶😍"
+      "Amazon said you are out of stock 😭😂",
+      "Google can’t find your level 🔍🔥",
+      "Beauty police are looking for you 🚔💖",
+      "You gave me sugar overdose 🍭😂",
+      "Best network connection ever 📶😍"
     ];
 
     function showLove() {
-      const loveDiv = document.getElementById('love');
-      const random = loveMessages[Math.floor(Math.random() * loveMessages.length)];
-      loveDiv.textContent = random;
-      loveDiv.classList.remove('hidden');
+      const div = document.getElementById('love');
+      const msg = loveMessages[Math.floor(Math.random()*loveMessages.length)];
+      div.textContent = msg;
+      div.classList.remove('hidden');
     }
 
     function showJoke() {
-      const jokeDiv = document.getElementById('joke');
-      const random = jokes[Math.floor(Math.random() * jokes.length)];
-      jokeDiv.textContent = random;
-      jokeDiv.classList.remove('hidden');
+      const div = document.getElementById('joke');
+      const msg = jokes[Math.floor(Math.random()*jokes.length)];
+      div.textContent = msg;
+      div.classList.remove('hidden');
     }
 
-    // Floating hearts
     function createHeart() {
       const heart = document.createElement('span');
       heart.innerHTML = '❤️';
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.fontSize = (15 + Math.random() * 25) + 'px';
       heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
       document.getElementById('hearts').appendChild(heart);
 
-      setTimeout(() => {
-        heart.remove();
-      }, 7000);
+      setTimeout(() => heart.remove(), 7000);
     }
 
     setInterval(createHeart, 400);
 
-    // Year
-    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+
   </script>
 
 </body>
 </html>
-
