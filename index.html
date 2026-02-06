@@ -3,174 +3,223 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Happy Birthday Divine Levi ❤️</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+  <title>Happy Birthday Nathaniel Abraham 🎉</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      min-height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow-x: hidden;
+
+    *{
+      box-sizing: border-box;
     }
 
-    .card {
-      background: white;
-      width: 90%;
-      max-width: 700px;
-      border-radius: 25px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      overflow:hidden;
+      color:white;
+    }
+
+    .container{
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(12px);
+      width:90%;
+      max-width:750px;
+      padding:35px;
+      border-radius:25px;
+      text-align:center;
+      box-shadow:0 20px 50px rgba(0,0,0,0.4);
       animation: pop 1s ease;
+      position:relative;
+      z-index:2;
     }
 
-    @keyframes pop {
-      from { transform: scale(0.7); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
+    @keyframes pop{
+      from{transform:scale(0.8);opacity:0;}
+      to{transform:scale(1);opacity:1;}
     }
 
-    h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.8rem;
-      color: #ff4d6d;
+    h1{
+      font-family:'Playfair Display',serif;
+      font-size:2.7rem;
+      margin-bottom:5px;
+      color:#ffd369;
     }
 
-    h2 {
-      color: #444;
-      margin-bottom: 15px;
+    h2{
+      font-weight:400;
+      margin-bottom:20px;
+      color:#eee;
     }
 
-    .avatar {
-      width: 160px;
-      height: 160px;
-      margin: 15px auto 25px;
-      border-radius: 50%;
-      padding: 6px;
-      background: linear-gradient(135deg, #ff4d6d, #fad0c4);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    /* Image */
+
+    .avatar{
+      width:170px;
+      height:170px;
+      margin:20px auto;
+      border-radius:50%;
+      padding:6px;
+      background: linear-gradient(135deg,#ffd369,#ff9f1c);
+      box-shadow:0 8px 25px rgba(0,0,0,0.5);
     }
 
-    .avatar img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 50%;
+    .avatar img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      border-radius:50%;
+      background:#fff;
     }
 
-    .message {
-      font-size: 1.1rem;
-      line-height: 1.7;
-      color: #333;
-      margin-bottom: 25px;
+    /* Buttons */
+
+    button{
+      background:#ffd369;
+      border:none;
+      padding:12px 28px;
+      border-radius:30px;
+      font-size:1rem;
+      cursor:pointer;
+      font-weight:600;
+      color:#222;
+      margin:8px;
+      transition:0.3s;
     }
 
-    .highlight {
-      color: #ff4d6d;
-      font-weight: 600;
+    button:hover{
+      background:#ffb703;
+      transform:scale(1.05);
     }
 
-    button {
-      background: #ff4d6d;
-      border: none;
-      color: white;
-      padding: 12px 25px;
-      border-radius: 30px;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: 0.3s;
-      margin: 6px;
+    /* Message */
+
+    .message{
+      margin-top:20px;
+      font-size:1.1rem;
+      line-height:1.7;
+      display:none;
+      animation:fade 1s ease;
+      color:#f1f1f1;
     }
 
-    button:hover {
-      background: #e63956;
-      transform: scale(1.05);
+    @keyframes fade{
+      from{opacity:0;}
+      to{opacity:1;}
     }
 
-    .hidden {
-      display: none;
+    footer{
+      margin-top:25px;
+      font-size:0.9rem;
+      color:#ccc;
     }
 
-    .surprise {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: #222;
+    /* Floating Text */
+
+    .hearts span{
+      position:fixed;
+      bottom:-30px;
+      white-space:nowrap;
+      font-weight:600;
+      color:#ffd369;
+      animation:float 6s linear infinite;
+      pointer-events:none;
+      z-index:1;
     }
 
-    .hearts span {
-      position: fixed;
-      bottom: -20px;
-      font-size: 20px;
-      animation: float 6s linear infinite;
-      color: #ff4d6d;
-    }
-
-    @keyframes float {
-      from {
-        transform: translateY(0);
-        opacity: 1;
+    @keyframes float{
+      from{
+        transform:translateY(0);
+        opacity:1;
       }
-      to {
-        transform: translateY(-110vh);
-        opacity: 0;
+      to{
+        transform:translateY(-120vh);
+        opacity:0;
       }
     }
 
-    footer {
-      margin-top: 25px;
-      font-size: 0.9rem;
-      color: #777;
-    }
   </style>
 </head>
 
 <body>
 
   <!-- Background Music -->
-  <audio id="bg-music" loop>
+  <audio id="bg-music" autoplay loop>
     <source src="Praiz_Singz_-_Happy_Birthday_Song_II_CeeNaija.com_.mp3" type="audio/mpeg">
   </audio>
 
-  <div class="card">
+  <div class="container">
 
-    <!-- Play Button -->
-    <button onclick="playMusic()">▶️ Play Birthday Song 🎶</button>
-
-    <h1>Happy Birthday 🎂❤️</h1>
-
-    <h2>My Queen, <span class="highlight">Divine Levi</span> 😘</h2>
+    <h1>Happy Birthday 🎂</h1>
+    <h2>Nathaniel Abraham</h2>
+    <h2>On This Day 06/02/26</h2>
 
     <div class="avatar">
-      <img src="levi.jpeg" alt="Devine Levi">
+      <!-- Replace with his picture -->
+      <img src="Nath.jpeg" alt="Nathaniel Abraham">
     </div>
 
-    <p class="message">
-      Today is the day the universe decided to show off…<br>
-      and created <span class="highlight">YOU</span>. 🌍✨<br><br>
+    <button onclick="playMusic()">▶️ Play Music</button>
+    <button onclick="showMessage()">💌 Read My Message</button>
 
-      From your smile that can restart my heart like NEPA light ⚡😄,
-      to your laugh that makes my problems forget themselves,
-      you are my daily dose of joy, love, and premium happiness. 💕
-      <br><br>
+    <div id="message" class="message">
 
-      Loving you is my favorite hobby,
-      my full-time job,
-      and my lifetime contract 😌✍️.
-    </p>
+      Happy Birthday, My Guy, Nathaniel Abraham! 🎂🔥
 
-    <button onclick="showLove()">Click for Extra Love 💝</button>
-    <button onclick="showJoke()">Click for Comedy 😂</button>
+      Today is special, not because cake exists (okay, small reason 😄),
+      but because **YOU** were born — and the world became louder, funnier, and better!
+      
+      From our crazy jokes to our deep late-night talks,
+      from laughing like mad people to surviving life together,
+      you’ve been more than a friend… you’ve been a **brother by choice** ❤️🤝.
+      
+      You’ve seen me at my worst,
+      still stayed.
+      You’ve seen me at my best,
+      still hyped me 😎🔥.
+      
+      That alone makes you rare.
+      
+      Bro, your life is a blessing.
+      Your smile hides strength.
+      Your heart carries loyalty.
+      And your presence makes everywhere feel like home.
+      
+      Even when life tries to stress us,
+      we still find a way to laugh like nothing happened 😂💪.
+      
+      I pray this new year brings you:
+      ✨ Bigger wins
+      ✨ Peace of mind
+      ✨ Good health
+      ✨ Real money (not “almost money” 😭💸)
+      ✨ And unlimited happiness
+      
+      May your enemies get tired,
+      your blessings multiply,
+      and your hustle pay you interest 😌📈.
+      
+      Never forget:
+      You matter.
+      You’re loved.
+      You’re appreciated.
+      And I’m proud to call you my friend ❤️.
+      
+      Happy Birthday, Legend 🥂🎉
+      More life, more vibes, more success!
+      
+      Your Day One 💯🔥
 
-    <div id="love" class="surprise hidden"></div>
-    <div id="joke" class="surprise hidden"></div>
+    </div>
 
     <footer>
-      Made with crazy love 💘 by Your Boyfriend 😎<br>
+      Made with respect and brotherly love 💙<br>
       &copy; <span id="year"></span>
     </footer>
 
@@ -182,43 +231,21 @@
 
     const music = document.getElementById("bg-music");
 
-    function playMusic() {
+    function playMusic(){
       music.play();
     }
 
-    const loveMessages = [
-      "Devine, if love was money, I would be a billionaire 💎❤️",
-      "You are my heartbeat and my WiFi 😩📱💕",
-      "I promise to love you even when you steal my food 😌🍟",
-      "You make my phone battery die fast 😍📲",
-      "My heart chose you forever 💳❌❤️"
-    ];
-
-    const jokes = [
-      "Amazon said you are out of stock 😭😂",
-      "Google can’t find your level 🔍🔥",
-      "Beauty police are looking for you 🚔💖",
-      "You gave me sugar overdose 🍭😂",
-      "Best network connection ever 📶😍"
-    ];
-
-    function showLove() {
-      const div = document.getElementById('love');
-      const msg = loveMessages[Math.floor(Math.random()*loveMessages.length)];
-      div.textContent = msg;
-      div.classList.remove('hidden');
+    function showMessage(){
+      document.getElementById("message").style.display = "block";
     }
 
-    function showJoke() {
-      const div = document.getElementById('joke');
-      const msg = jokes[Math.floor(Math.random()*jokes.length)];
-      div.textContent = msg;
-      div.classList.remove('hidden');
-    }
+    // Floating Text Function (Your Provided Function Modified)
 
     function createHeart() {
       const heart = document.createElement('span');
-      heart.innerHTML = '❤️';
+
+      heart.innerHTML = 'Happy Birthday Mr. Nathaniel Abraham 🎉';
+
       heart.style.left = Math.random() * 100 + 'vw';
       heart.style.fontSize = (15 + Math.random() * 25) + 'px';
       heart.style.animationDuration = (4 + Math.random() * 4) + 's';
@@ -228,13 +255,13 @@
       setTimeout(() => heart.remove(), 7000);
     }
 
-    setInterval(createHeart, 400);
+    setInterval(createHeart, 600);
 
-    document.getElementById('year').textContent =
+    // Year
+    document.getElementById("year").textContent =
       new Date().getFullYear();
 
   </script>
 
 </body>
 </html>
-
