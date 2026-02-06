@@ -1,267 +1,334 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birthday Nathaniel Abraham 🎉</title>
+<title>Happy Birthday Nathaniel Abraham 🎉</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
 
-  <style>
+<style>
 
-    *{
-      box-sizing: border-box;
-    }
+*{
+  box-sizing:border-box;
+}
 
-    body{
-      margin:0;
-      font-family:'Poppins',sans-serif;
-      background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
-      min-height:100vh;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      overflow:hidden;
-      color:white;
-    }
+body{
+  margin:0;
+  font-family:'Poppins',sans-serif;
+  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+  color:white;
+}
 
-    .container{
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      width:90%;
-      max-width:750px;
-      padding:35px;
-      border-radius:25px;
-      text-align:center;
-      box-shadow:0 20px 50px rgba(0,0,0,0.4);
-      animation: pop 1s ease;
-      position:relative;
-      z-index:2;
-    }
+/* Main Card */
 
-    @keyframes pop{
-      from{transform:scale(0.8);opacity:0;}
-      to{transform:scale(1);opacity:1;}
-    }
+.container{
+  background:rgba(255,255,255,0.08);
+  backdrop-filter:blur(12px);
+  width:90%;
+  max-width:750px;
+  padding:35px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  animation:pop 1s ease;
+  position:relative;
+  z-index:2;
+}
 
-    h1{
-      font-family:'Playfair Display',serif;
-      font-size:2.7rem;
-      margin-bottom:5px;
-      color:#ffd369;
-    }
+@keyframes pop{
+  from{transform:scale(0.8);opacity:0;}
+  to{transform:scale(1);opacity:1;}
+}
 
-    h2{
-      font-weight:400;
-      margin-bottom:20px;
-      color:#eee;
-    }
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:2.6rem;
+  color:#ffd369;
+}
 
-    /* Image */
+h2{
+  font-weight:400;
+  margin-bottom:20px;
+}
 
-    .avatar{
-      width:170px;
-      height:170px;
-      margin:20px auto;
-      border-radius:50%;
-      padding:6px;
-      background: linear-gradient(135deg,#ffd369,#ff9f1c);
-      box-shadow:0 8px 25px rgba(0,0,0,0.5);
-    }
+/* Image */
 
-    .avatar img{
-      width:100%;
-      height:100%;
-      object-fit:cover;
-      border-radius:50%;
-      background:#fff;
-    }
+.avatar{
+  width:170px;
+  height:170px;
+  margin:20px auto;
+  border-radius:50%;
+  padding:6px;
+  background:linear-gradient(135deg,#ffd369,#ff9f1c);
+  box-shadow:0 8px 25px rgba(0,0,0,0.5);
+}
 
-    /* Buttons */
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:50%;
+}
 
-    button{
-      background:#ffd369;
-      border:none;
-      padding:12px 28px;
-      border-radius:30px;
-      font-size:1rem;
-      cursor:pointer;
-      font-weight:600;
-      color:#222;
-      margin:8px;
-      transition:0.3s;
-    }
+/* Buttons */
 
-    button:hover{
-      background:#ffb703;
-      transform:scale(1.05);
-    }
+button{
+  background:#ffd369;
+  border:none;
+  padding:12px 28px;
+  border-radius:30px;
+  font-size:1rem;
+  cursor:pointer;
+  font-weight:600;
+  color:#222;
+  margin:6px;
+  transition:0.3s;
+}
 
-    /* Message */
+button:hover{
+  background:#ffb703;
+  transform:scale(1.05);
+}
 
-    .message{
-      margin-top:20px;
-      font-size:1.1rem;
-      line-height:1.7;
-      display:none;
-      animation:fade 1s ease;
-      color:#f1f1f1;
-    }
+/* Footer */
 
-    @keyframes fade{
-      from{opacity:0;}
-      to{opacity:1;}
-    }
+footer{
+  margin-top:25px;
+  font-size:0.9rem;
+  color:#ccc;
+}
 
-    footer{
-      margin-top:25px;
-      font-size:0.9rem;
-      color:#ccc;
-    }
+/* Floating Text */
 
-    /* Floating Text */
+.hearts span{
+  position:fixed;
+  bottom:-30px;
+  white-space:nowrap;
+  font-weight:600;
+  color:#ffd369;
+  animation:float 6s linear infinite;
+  pointer-events:none;
+  z-index:1;
+}
 
-    .hearts span{
-      position:fixed;
-      bottom:-30px;
-      white-space:nowrap;
-      font-weight:600;
-      color:#ffd369;
-      animation:float 6s linear infinite;
-      pointer-events:none;
-      z-index:1;
-    }
+@keyframes float{
+  from{
+    transform:translateY(0);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+}
 
-    @keyframes float{
-      from{
-        transform:translateY(0);
-        opacity:1;
-      }
-      to{
-        transform:translateY(-120vh);
-        opacity:0;
-      }
-    }
+/* Popup Modal */
 
-  </style>
+.modal{
+  display:none;
+  position:fixed;
+  z-index:999;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  justify-content:center;
+  align-items:center;
+}
+
+.modal-content{
+  background:white;
+  color:#222;
+  padding:30px;
+  width:90%;
+  max-width:520px;
+  border-radius:20px;
+  text-align:center;
+  animation:pop 0.5s ease;
+}
+
+.modal-content h3{
+  color:#ff9f1c;
+  margin-bottom:15px;
+}
+
+#typedText{
+  font-size:1.05rem;
+  line-height:1.7;
+  min-height:180px;
+  white-space:pre-line;
+}
+
+.close{
+  background:crimson;
+  color:white;
+  border:none;
+  padding:8px 20px;
+  border-radius:20px;
+  cursor:pointer;
+  margin-top:20px;
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- Background Music -->
-  <audio id="bg-music" autoplay loop>
-    <source src="Praiz_Singz_-_Happy_Birthday_Song_II_CeeNaija.com_.mp3" type="audio/mpeg">
-  </audio>
+<!-- Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="Praiz_Singz_-_Happy_Birthday_Song_II_CeeNaija.com_.mp3" type="audio/mpeg">
+</audio>
 
-  <div class="container">
+<div class="container">
 
-    <h1>Happy Birthday 🎂</h1>
-    <h2>Nathaniel Abraham</h2>
-    <h2>On This Day 06/02/26</h2>
+  <h1>Happy Birthday 🎂</h1>
+  <h2>Nathaniel Abraham</h2>
+  <h3>Feb-06-2026</h3>
 
-    <div class="avatar">
-      <!-- Replace with his picture -->
-      <img src="Nath.jpeg" alt="Nathaniel Abraham">
-    </div>
+  <div class="avatar">
+    <img src="Nath.jpeg" alt="Nathaniel Abraham">
+  </div>
 
-    <button onclick="playMusic()">▶️ Play Music</button>
-    <button onclick="showMessage()">💌 Read My Message</button>
+  <button onclick="playMusic()">▶️ Play Music</button>
+  <button onclick="openMessage()">💌 Read My Message</button>
 
-    <div id="message" class="message">
+  <footer>
+    Made with brotherly love 💙<br>
+    &copy; <span id="year"></span>
+  </footer>
 
-      Happy Birthday, My Guy, Nathaniel Abraham! 🎂🔥
+</div>
 
-      Today is special, not because cake exists (okay, small reason 😄),
-      but because **YOU** were born — and the world became louder, funnier, and better!
-      
-      From our crazy jokes to our deep late-night talks,
-      from laughing like mad people to surviving life together,
-      you’ve been more than a friend… you’ve been a **brother by choice** ❤️🤝.
-      
-      You’ve seen me at my worst,
-      still stayed.
-      You’ve seen me at my best,
-      still hyped me 😎🔥.
-      
-      That alone makes you rare.
-      
-      Bro, your life is a blessing.
-      Your smile hides strength.
-      Your heart carries loyalty.
-      And your presence makes everywhere feel like home.
-      
-      Even when life tries to stress us,
-      we still find a way to laugh like nothing happened 😂💪.
-      
-      I pray this new year brings you:
-      ✨ Bigger wins
-      ✨ Peace of mind
-      ✨ Good health
-      ✨ Real money (not “almost money” 😭💸)
-      ✨ And unlimited happiness
-      
-      May your enemies get tired,
-      your blessings multiply,
-      and your hustle pay you interest 😌📈.
-      
-      Never forget:
-      You matter.
-      You’re loved.
-      You’re appreciated.
-      And I’m proud to call you my friend ❤️.
-      
-      Happy Birthday, Legend 🥂🎉
-      More life, more vibes, more success!
-      
-      Your Day One 💯🔥
+<!-- Floating Text -->
+<div class="hearts" id="hearts"></div>
 
-    </div>
+<!-- Popup Modal -->
+<div class="modal" id="messageModal">
 
-    <footer>
-      Made with respect and brotherly love 💙<br>
-      &copy; <span id="year"></span>
-    </footer>
+  <div class="modal-content">
+
+    <h3>💌 Message For You</h3>
+
+    <div id="typedText"></div>
+
+    <button class="close" onclick="closeMessage()">Close ❌</button>
 
   </div>
 
-  <div class="hearts" id="hearts"></div>
+</div>
 
-  <script>
+<script>
 
-    const music = document.getElementById("bg-music");
+const music = document.getElementById("bg-music");
 
-    function playMusic(){
-      music.play();
-    }
+function playMusic(){
+  music.play();
+}
 
-    function showMessage(){
-      document.getElementById("message").style.display = "block";
-    }
+/* Typing Message */
 
-    // Floating Text Function (Your Provided Function Modified)
+const messageText = 
+`Happy Birthday, My Guy, Nathaniel Abraham! 🎂🔥
 
-    function createHeart() {
-      const heart = document.createElement('span');
+Today is special, not because cake exists (okay, small reason 😄),
+But because YOU were born and the world became louder, funnier, and better!
 
-      heart.innerHTML = 'Happy Birthday Mr. Nathaniel Abraham 🎉';
+From our crazy jokes to our deep late-night talks,
+from laughing like mad people to surviving life together,
+You’ve been more than a friend… you’ve been a brother by choice ❤️🤝.
 
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.fontSize = (15 + Math.random() * 25) + 'px';
-      heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+You’ve seen me at my worst,
+still stayed.
+You’ve seen me at my best,
+still hyped me 😎🔥.
 
-      document.getElementById('hearts').appendChild(heart);
+That alone makes you rare.
 
-      setTimeout(() => heart.remove(), 7000);
-    }
+Bro, your life is a blessing.
+Your smile hides strength.
+Your heart carries loyalty.
+And your presence makes everywhere feel like home.
 
-    setInterval(createHeart, 600);
+Even when life tries to stress us,
+We still find a way to laugh as if nothing happened 😂💪.
 
-    // Year
-    document.getElementById("year").textContent =
-      new Date().getFullYear();
+I pray this new year brings you:
+✨ Bigger wins
+✨ Peace of mind
+✨ Good health
+✨ Real money (not “almost money” 😭💸)
+✨ And unlimited happiness
 
-  </script>
+May your enemies get tired,
+Your blessings multiply,
+And your hustle pays you interest 😌📈.
+
+Never forget:
+You matter.
+You’re loved.
+You’re appreciated.
+And I’m proud to call you my friend ❤️.
+
+Happy Birthday, Legend 🥂🎉
+More life, more vibes, more success!
+
+Your Day One 💯🔥`;
+
+let index = 0;
+let speed = 35;
+
+function typeWriter(){
+  if(index < messageText.length){
+    document.getElementById("typedText").innerHTML += messageText.charAt(index);
+    index++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+function openMessage(){
+  document.getElementById("messageModal").style.display = "flex";
+  document.getElementById("typedText").innerHTML = "";
+  index = 0;
+  typeWriter();
+}
+
+function closeMessage(){
+  document.getElementById("messageModal").style.display = "none";
+}
+
+/* Floating Text */
+
+function createHeart() {
+
+  const heart = document.createElement('span');
+
+  heart.innerHTML = 'Happy Birthday Mr. Nathaniel Abraham 🎉';
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.fontSize = (15 + Math.random() * 25) + 'px';
+  heart.style.animationDuration = (4 + Math.random() * 4) + 's';
+
+  document.getElementById('hearts').appendChild(heart);
+
+  setTimeout(() => heart.remove(), 7000);
+}
+
+setInterval(createHeart, 600);
+
+/* Year */
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+</script>
 
 </body>
 </html>
